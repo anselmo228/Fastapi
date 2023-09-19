@@ -1,7 +1,10 @@
 from fastapi import FastAPI, File, Form, UploadFile
+
 import boto3
 
 app = FastAPI()
+# 파일 업로드 크기 제한 해제
+app.config = {"max_request_body_size": None}
 
 # AWS S3 연결 함수
 def s3_connection():
