@@ -13,6 +13,7 @@ files = {
     "access_key": (None, "ec2_test"),
 }
 
+
 response = requests.post(url, files=files)
 
 print(response.text)
