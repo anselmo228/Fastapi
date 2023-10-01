@@ -347,7 +347,7 @@ def train1key(
 
 
 # -- Process data
-trainset_dir4 = "D:\\RVC\\dataset" ## api에서 get으로 입력받고
+trainset_dir4 = "/Users/jungheechan/Desktop/raw" ## api에서 get으로 입력받고
 exp_dir1 = "rvc_exp2" ## api에서 post로 S3 Bucket에 전송해줘야할듯
 sr2 = "48k"
 np7 = int(np.ceil(config.n_cpu / 1.5))
@@ -375,3 +375,40 @@ train1key(
     total_epoch11, batch_size12, if_save_latest13, pretrained_G14, pretrained_D15, gpus16, if_cache_gpu17,
     if_save_every_weights18, version19
 )
+
+### API 생성 ###
+from fastapi import FastAPI, Form
+from fastapi.responses import JSONResponse
+
+app = FastAPI()
+
+@app.post("/train/")
+async def train(
+    exp_dir1: str = Form(...),  # 사용자 입력값
+    trainset_dir4: str = Form(...),  # 사용자 입력값
+):
+    sr2
+    np7
+    gpus6
+    f0method8
+    if_f0_3
+    version19
+    gpus_rmvpe
+    spk_id5
+    save_epoch10
+    total_epoch11
+    batch_size12
+    if_save_latest13
+    pretrained_G14
+    pretrained_D15
+    gpus16
+    if_cache_gpu17 
+    if_save_every_weights18
+
+    train1key(
+    exp_dir1, sr2, if_f0_3, trainset_dir4, spk_id5, np7, f0method8, save_epoch10,
+    total_epoch11, batch_size12, if_save_latest13, pretrained_G14, pretrained_D15, gpus16, if_cache_gpu17,
+    if_save_every_weights18, version19
+    )
+
+    return JSONResponse(content={"message": "API 호출이 성공했습니다."})

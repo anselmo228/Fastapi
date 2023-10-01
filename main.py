@@ -49,5 +49,5 @@ async def upload_file(file: UploadFile, access_key: str = Form(...)):
 # curl -X POST -F "file=@/Users/jungheechan/AWS_Flask/output3_5.wav" -F "access_key= api_test" http://0.0.0.0:8001/upload/
 # uvicorn main:app --host 0.0.0.0 --port 8001 --reload
 # curl -X POST -F "file=@/Users/jungheechan/AWS_Flask/output3_5.wav" -F "access_key=ec2_test3" http://13.125.73.24:8001/upload/
-
+# ssh -i "/Users/jungheechan/Desktop/queen0228.pem" ubuntu@13.125.245.102
 

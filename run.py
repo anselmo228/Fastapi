@@ -10,7 +10,7 @@ url = "http://13.125.245.102/upload/"
 
 files = {
     "file": ("/Users/jungheechan/AWS_Flask/output3_5.wav", open("/Users/jungheechan/AWS_Flask/output3_5.wav", "rb")),
-    "access_key": (None, "ec2_test"),
+    "access_key": (None, "ec2_final"),
 }
 
 
