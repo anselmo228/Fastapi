@@ -335,7 +335,7 @@ def train1key(
         "%s/trained_IVF%s_Flat_nprobe_%s_%s_%s.index"
         % (model_log_dir, n_ivf, index_ivf.nprobe, exp_dir1, version19),
     )
-    # yield get_info_str("adding index")
+    # yield get_info_str("addißng index")
     batch_size_add = 8192
     for i in range(0, big_npy.shape[0], batch_size_add):
         index.add(big_npy[i: i + batch_size_add])
@@ -347,7 +347,7 @@ def train1key(
 
 
 # -- Process data
-trainset_dir4 = "/Users/jungheechan/Desktop/raw" ## api에서 get으로 입력받고
+trainset_dir4 = "/Users/jungheechan/Desktop/raw" ## api에서 get으로 입력받고 zip 아님
 exp_dir1 = "rvc_exp2" ## api에서 post로 S3 Bucket에 전송해줘야할듯
 sr2 = "48k"
 np7 = int(np.ceil(config.n_cpu / 1.5))
@@ -370,11 +370,13 @@ pretrained_D15 = 'pretrained_v2/f0D48k.pth'
 gpus16 = '0'
 if_cache_gpu17 = i18n("否")
 if_save_every_weights18 = i18n("否")
+
 train1key(
     exp_dir1, sr2, if_f0_3, trainset_dir4, spk_id5, np7, f0method8, save_epoch10,
     total_epoch11, batch_size12, if_save_latest13, pretrained_G14, pretrained_D15, gpus16, if_cache_gpu17,
     if_save_every_weights18, version19
 )
+# exp_dir1 파일 안에 ckpt, etc...
 
 ### API 생성 ###
 from fastapi import FastAPI, Form
