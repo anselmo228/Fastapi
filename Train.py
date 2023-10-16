@@ -371,11 +371,13 @@ gpus16 = '0'
 if_cache_gpu17 = i18n("否")
 if_save_every_weights18 = i18n("否")
 
+'''
 train1key(
     exp_dir1, sr2, if_f0_3, trainset_dir4, spk_id5, np7, f0method8, save_epoch10,
     total_epoch11, batch_size12, if_save_latest13, pretrained_G14, pretrained_D15, gpus16, if_cache_gpu17,
     if_save_every_weights18, version19
 )
+'''
 # exp_dir1 파일 안에 ckpt, etc...
 
 ### API 생성 ###
